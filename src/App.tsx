@@ -1,10 +1,17 @@
-import { Box, Text } from "@chakra-ui/react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+// Pages import
+import Home from "./pages";
+import TaskOne from "./pages/task-one";
 
 const App: React.FC = () => {
   return (
-    <Box>
-      <Text>Welcome to chakraUI</Text>
-    </Box>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="task-one" element={<TaskOne />} />
+      </Routes>
+    </Router>
   );
 };
 
