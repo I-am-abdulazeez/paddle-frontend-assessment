@@ -1,11 +1,6 @@
-import { Box, Button, Text, VStack } from "@chakra-ui/react";
+import { Button, Text, VStack } from "@chakra-ui/react";
 
-type CardProps = {
-  cardText: string;
-  cardButton: string;
-  cardButtonColorScheme?: string;
-  cardTopic: string;
-};
+import { CardProps } from "../../interfaces";
 
 const Card: React.FC<CardProps> = ({
   cardButton,
