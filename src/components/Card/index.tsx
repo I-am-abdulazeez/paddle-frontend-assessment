@@ -3,13 +3,15 @@ import { Box, Button, Text, VStack } from "@chakra-ui/react";
 type CardProps = {
   cardText: string;
   cardButton: string;
-  buttonColorScheme?: string;
+  cardButtonColorScheme?: string;
+  cardTopic: string;
 };
 
 const Card: React.FC<CardProps> = ({
   cardButton,
   cardText,
-  buttonColorScheme,
+  cardButtonColorScheme,
+  cardTopic,
 }) => {
   return (
     <VStack
@@ -19,10 +21,11 @@ const Card: React.FC<CardProps> = ({
       shadow={"md"}
       spacing={5}
     >
-      <Text fontSize={"lg"} fontWeight="medium">
+      <Text fontSize={"xl"} fontWeight="medium">
         {cardText}
       </Text>
-      <Button size={"sm"} colorScheme={buttonColorScheme || "purple"}>
+      <Text>{cardTopic}</Text>
+      <Button size={"sm"} colorScheme={cardButtonColorScheme || "purple"}>
         {cardButton}
       </Button>
     </VStack>
