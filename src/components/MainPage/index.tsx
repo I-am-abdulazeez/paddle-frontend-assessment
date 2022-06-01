@@ -4,35 +4,35 @@ import {
   chakra,
   Center,
   Text,
-  Stack,
   HStack,
   Input,
   Button,
+  SimpleGrid,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import ClockCard from "../ClockCard";
 
 const MainPage: React.FC = () => {
+  const buttonSize = useBreakpointValue({ base: "sm", md: "md" });
   return (
     <Box as="main" textAlign={"center"} mt={"5rem"} color="white">
-      <Heading size={"xl"}>SOMETHING AWESOME IS</Heading>
-      <Heading size={"xl"} mt={3}>
+      <Heading size={"xl"}>
+        SOMETHING AWESOME IS <br />
         COMING SOON
       </Heading>
       <Text mt={6} fontSize="sm" fontWeight="light">
         You are all in one affiliate marketing tracking software{" "}
         <chakra.span fontWeight={"medium"}>track, automate</chakra.span> and
-      </Text>
-      <Text fontSize="sm" fontWeight="light">
-        {" "}
-        <chakra.span fontWeight={"medium"}>optimize</chakra.span> your campaign
+        <br />
+        <chakra.span fontWeight={"medium"}>optimize</chakra.span> your campaign.
       </Text>
       <Center>
-        <Stack spacing={6} mt={6} direction={["column", "row"]}>
+        <SimpleGrid spacing={6} columns={{ base: 2, md: 4 }} mt={6}>
           <ClockCard cardTime="7" cardTag="Days" />
           <ClockCard cardTime="24" cardTag="Hours" />
           <ClockCard cardTime="54" cardTag="Minutes" />
           <ClockCard cardTime="11" cardTag="Seconds" />
-        </Stack>
+        </SimpleGrid>
       </Center>
       <Center mt="3rem">
         <HStack spacing={4}>
@@ -60,16 +60,39 @@ const MainPage: React.FC = () => {
           />
         </HStack>
       </Center>
-      <Center mt={7}>
-        <HStack spacing={-50}>
+      <Center mt={"3rem"}>
+        <HStack
+          borderRadius="full"
+          p={1}
+          width={{ base: "100%", md: "50%" }}
+          bgColor="white"
+        >
           <Input
-            bgColor={"white"}
-            borderRadius="full"
-            p={5}
+            bgColor={"transparent"}
             placeholder="Last name"
-            width="400px"
+            _focus={{
+              boxShadow: "none",
+            }}
+            width="300px"
+            border="none"
+            color={"#000000"}
           />
-          <Button textTransform={"uppercase"}>Join our waiting list</Button>
+          <Button
+            rounded={"full"}
+            bgColor="red"
+            size={buttonSize}
+            _hover={{
+              bgColor: "red",
+            }}
+            _active={{
+              bgColor: "red",
+            }}
+            width={{ base: "270px", md: "auto" }}
+            textTransform={"uppercase"}
+            fontSize={{ base: "xs", md: "sm" }}
+          >
+            Join our waiting list
+          </Button>
         </HStack>
       </Center>
     </Box>
