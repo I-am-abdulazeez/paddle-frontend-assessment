@@ -1,6 +1,14 @@
 # Frontend Coding Challenge
 
-This app is a frontend coding assessment based on vite-react app. Added chakra-ui/react as a ui-framework & react-router-dom for routing across the application.
+This app is a frontend coding assessment based on vite-react app. Added chakra-ui/react as a ui-framework & react-router-dom for routing across the application. This application consists of two tasks.
+
+## Task one
+
+- Design skills
+
+## Task two
+
+- Communication with REST_API
 
 ## Language used 💪.
 
