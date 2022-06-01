@@ -18,12 +18,14 @@ const Home: React.FC = () => {
             cardTopic="Design a landing page / Contact page"
             cardButton="Go to task 1"
             cardText="Paddle Assessment Task 1"
+            cardLinkTo="/task-one"
           />
           <Card
             cardTopic="Use Github API to display latest repo from the last 30days"
             cardButton="Go to task 2"
             cardText="Paddle Assessment Task 2"
             cardButtonColorScheme="pink"
+            cardLinkTo="task-two"
           />
         </Stack>
       </VStack>
