@@ -3,4 +3,10 @@ export interface CardProps {
   cardButton: string;
   cardButtonColorScheme?: string;
   cardTopic: string;
+  cardLinkTo: string;
+}
+
+export interface ClockCardProps {
+  cardTime: string;
+  cardTag: string;
 }
