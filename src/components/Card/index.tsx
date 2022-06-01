@@ -1,4 +1,5 @@
 import { Button, Text, VStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 import { CardProps } from "../../interfaces";
 
@@ -7,6 +8,7 @@ const Card: React.FC<CardProps> = ({
   cardText,
   cardButtonColorScheme,
   cardTopic,
+  cardLinkTo,
 }) => {
   return (
     <VStack
@@ -20,9 +22,11 @@ const Card: React.FC<CardProps> = ({
         {cardText}
       </Text>
       <Text>{cardTopic}</Text>
-      <Button size={"sm"} colorScheme={cardButtonColorScheme || "purple"}>
-        {cardButton}
-      </Button>
+      <Link to={cardLinkTo}>
+        <Button size={"sm"} colorScheme={cardButtonColorScheme || "purple"}>
+          {cardButton}
+        </Button>
+      </Link>
     </VStack>
   );
 };
