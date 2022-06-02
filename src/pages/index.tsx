@@ -25,7 +25,7 @@ const Home: React.FC = () => {
             cardButton="Go to task 2"
             cardText="Paddle Assessment Task 2"
             cardButtonColorScheme="pink"
-            cardLinkTo="task-two"
+            cardLinkTo="/github"
           />
         </Stack>
       </VStack>
