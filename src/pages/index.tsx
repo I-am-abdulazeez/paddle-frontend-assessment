@@ -22,7 +22,7 @@ const Home: React.FC = () => {
           />
           <Card
             cardTopic="Use Github API to display latest repo from the last 30days"
-            cardButton="Go to task 2"
+            cardButton="Go to github data page"
             cardText="Paddle Assessment Task 2"
             cardButtonColorScheme="pink"
             cardLinkTo="/github"
