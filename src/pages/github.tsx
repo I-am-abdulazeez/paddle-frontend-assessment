@@ -1,22 +1,35 @@
-import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Container,
+  Heading,
+  HStack,
+  Image,
+  Spinner,
+  Text,
+} from "@chakra-ui/react";
 
 import { useQuery } from "react-query";
-import axios from "axios";
-
-import { GITHUB_API_URL } from "../contants";
-
-const fetchRepoData = async () => {
-  const res = await axios.get(GITHUB_API_URL);
-  return res.data;
-};
+import GithubRepoCard from "../components/GithubRepoCard";
+import { fetchRepoData } from "../contants";
 
 const Github: React.FC = () => {
-  const { data } = useQuery("repoData", fetchRepoData);
+  const { data, isLoading } = useQuery("repoData", fetchRepoData);
+  console.log(data?.items);
   return (
     <Container mt={3} maxW="container.lg">
-      <Heading size={"lg"} textAlign={"center"}>
+      <Heading mb={6} size={"lg"} textAlign={"center"}>
         Trending Github Repos
       </Heading>
+      <Center mt={4}>
+        {isLoading && (
+          <Spinner thickness="3px" emptyColor="gray.200" color="pink.500" />
+        )}
+      </Center>
+      {data?.items?.map((item: any) => {
+        console.log(item?.avatar_url);
+        return <GithubRepoCard item={item} />;
+      })}
     </Container>
   );
 };
