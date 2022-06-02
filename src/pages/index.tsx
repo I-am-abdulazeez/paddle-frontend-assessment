@@ -15,7 +15,7 @@ const Home: React.FC = () => {
         </Heading>
         <Stack direction={{ base: "column", md: "row" }} spacing={5}>
           <Card
-            cardTopic="Design a landing page / Comming soon page / Conatct Us page"
+            cardTopic="Design a  Comming soon page / Conatct Us page"
             cardButton="Go to coming soon page"
             cardText="Paddle Assessment Task 1"
             cardLinkTo="/comingsoon"
