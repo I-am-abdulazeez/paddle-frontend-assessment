@@ -9,4 +9,5 @@ export interface CardProps {
 export interface ClockCardProps {
   cardTime: string;
   cardTag: string;
+  cardIsAllRounded?: boolean;
 }
