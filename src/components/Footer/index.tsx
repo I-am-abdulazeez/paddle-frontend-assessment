@@ -30,7 +30,8 @@ const Footer: React.FC = () => {
         <Link to="#">Privacy policy</Link>
       </HStack>
       <Text textAlign={"center"} color="#A0AEC0" fontSize={"sm"}>
-        Copyright @ Peddle Technologies. All Rights Reserved.
+        Copyright {new Date().getFullYear()} @ Peddle Technologies. All Rights
+        Reserved.
       </Text>
     </VStack>
   );
