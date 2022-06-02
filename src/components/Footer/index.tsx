@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
   return (
     <VStack
       spacing={5}
-      mt={{ base: "60", md: "56" }}
+      mt={{ base: "48", sm: "32", md: "56" }}
       justifyContent={"center"}
       color={"white"}
       as="footer"
