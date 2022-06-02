@@ -18,7 +18,7 @@ const MainPage: React.FC = () => {
     <Box as="main" textAlign={"center"} mt={"5rem"} color="white">
       <Heading size={"xl"}>
         SOMETHING AWESOME IS <br />
-        COMING SOON
+        <chakra.p mt={2}>COMING SOON</chakra.p>
       </Heading>
       <Text mt={6} fontSize="sm" fontWeight="light">
         You are all in one affiliate marketing tracking software{" "}
@@ -27,11 +27,11 @@ const MainPage: React.FC = () => {
         <chakra.span fontWeight={"medium"}>optimize</chakra.span> your campaign.
       </Text>
       <Center>
-        <SimpleGrid spacing={6} columns={{ base: 2, md: 4 }} mt={6}>
-          <ClockCard cardTime="7" cardTag="Days" />
-          <ClockCard cardTime="24" cardTag="Hours" />
-          <ClockCard cardTime="54" cardTag="Minutes" />
-          <ClockCard cardTime="11" cardTag="Seconds" />
+        <SimpleGrid spacing={6} columns={{ base: 2, md: 4 }} mt={8}>
+          <ClockCard cardIsAllRounded cardTime="7" cardTag="Days" />
+          <ClockCard cardIsAllRounded cardTime="24" cardTag="Hours" />
+          <ClockCard cardIsAllRounded cardTime="54" cardTag="Minutes" />
+          <ClockCard cardIsAllRounded={false} cardTime="11" cardTag="Second" />
         </SimpleGrid>
       </Center>
       <Center mt="3rem">
