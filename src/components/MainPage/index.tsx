@@ -14,13 +14,14 @@ import ClockCard from "../ClockCard";
 
 const MainPage: React.FC = () => {
   const buttonSize = useBreakpointValue({ base: "sm", md: "md" });
+  const headingSize = useBreakpointValue({ base: "lg", md: "xl" });
   return (
     <Box as="main" textAlign={"center"} mt={"5rem"} color="white">
-      <Heading size={"xl"}>
+      <Heading size={headingSize}>
         SOMETHING AWESOME IS <br />
         <chakra.p mt={2}>COMING SOON</chakra.p>
       </Heading>
-      <Text mt={6} fontSize="sm" fontWeight="light">
+      <Text mt={6} fontSize={{ base: "15px", md: "sm" }} fontWeight="light">
         You are all in one affiliate marketing tracking software{" "}
         <chakra.span fontWeight={"medium"}>track, automate</chakra.span> and
         <br />

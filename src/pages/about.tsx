@@ -3,7 +3,9 @@ import { Box, Heading } from "@chakra-ui/react";
 const About: React.FC = () => {
   return (
     <Box>
-      <Heading>Welcome to About us Page.</Heading>
+      <Heading mt={3} size={"lg"} textAlign={"center"}>
+        Welcome to About Page
+      </Heading>
     </Box>
   );
 };
