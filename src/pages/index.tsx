@@ -11,14 +11,14 @@ const Home: React.FC = () => {
           bgClip="text"
           bgGradient="linear(to-l, #7928CA, #FF0080)"
         >
-          Welcome to <Text mt={3}>Paddle-Frontend-Assessment</Text>
+          Welcome to <Text mt={3}>Peddle-Frontend-Assessment</Text>
         </Heading>
-        <Stack direction={["column", "row"]} spacing={5}>
+        <Stack direction={{ base: "column", md: "row" }} spacing={5}>
           <Card
-            cardTopic="Design a landing page / Contact page"
-            cardButton="Go to task 1"
+            cardTopic="Design a landing page / Comming soon page / Conatct Us page"
+            cardButton="Go to coming soon page"
             cardText="Paddle Assessment Task 1"
-            cardLinkTo="/task-one"
+            cardLinkTo="/comingsoon"
           />
           <Card
             cardTopic="Use Github API to display latest repo from the last 30days"
