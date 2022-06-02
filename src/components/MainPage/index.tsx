@@ -45,7 +45,6 @@ const MainPage: React.FC = () => {
             _focus={{
               boxShadow: "none",
             }}
-            width="auto"
           />
           <Input
             border="0px"
@@ -56,14 +55,12 @@ const MainPage: React.FC = () => {
             _focus={{
               boxShadow: "none",
             }}
-            width="auto"
           />
         </HStack>
       </Center>
       <Center mt={"3rem"}>
         <HStack
           borderRadius="full"
-          p={1}
           width={{ base: "100%", md: "50%" }}
           bgColor="white"
         >
@@ -74,18 +71,20 @@ const MainPage: React.FC = () => {
               boxShadow: "none",
             }}
             width="300px"
+            fontSize={"sm"}
             border="none"
             color={"#000000"}
           />
           <Button
             rounded={"full"}
-            bgColor="red"
+            bgColor="#271AC1"
             size={buttonSize}
             _hover={{
-              bgColor: "red",
+              bgColor: "#271AC1",
             }}
+            height={{ base: "3rem" }}
             _active={{
-              bgColor: "red",
+              bgColor: "#271AC1",
             }}
             width={{ base: "270px", md: "auto" }}
             textTransform={"uppercase"}
