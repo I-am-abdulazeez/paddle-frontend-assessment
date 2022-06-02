@@ -11,3 +11,8 @@ export interface ClockCardProps {
   cardTag: string;
   cardIsAllRounded?: boolean;
 }
+
+export interface GithubRepoCardProps {
+  children?: React.ReactNode;
+  item: any;
+}
