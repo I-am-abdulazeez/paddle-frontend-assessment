@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
           <Button
             color="white"
             variant={"ghost"}
-            borderRadius={"full"}
+            rounded={"full"}
             size={buttonSize}
             _active={{
               bgColor: "transparent",
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
             About
           </Button>
           <Button
-            borderRadius={"full"}
+            rounded={"full"}
             _active={{
               bgColor: "transparent",
             }}
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
             Blog
           </Button>
           <Button
-            borderRadius={"full"}
+            rounded={"full"}
             _hover={{
               bgColor: "#271AC1",
             }}
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
               bgColor: "#271AC1",
             }}
             size={buttonSize}
-            padding={5}
+            p={5}
             textTransform="uppercase"
             bgColor={"#271AC1"}
             fontWeight="medium"
