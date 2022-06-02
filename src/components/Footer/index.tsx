@@ -12,13 +12,13 @@ import { Link } from "react-router-dom";
 const Footer: React.FC = () => {
   return (
     <VStack
-      spacing={6}
+      spacing={5}
       mt={"56"}
       justifyContent={"center"}
       color={"white"}
       as="footer"
     >
-      <HStack spacing={7}>
+      <HStack spacing={7} mb={3}>
         <RiYoutubeFill size={"25px"} />
         <RiFacebookBoxFill size={"25px"} color="#A0AEC0" />
         <RiLinkedinBoxFill size={"25px"} color="#A0AEC0" />
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
         <Link to="#">Terms of services</Link>
         <Link to="#">Privacy policy</Link>
       </HStack>
-      <Text color="#A0AEC0" fontSize={"sm"}>
+      <Text textAlign={"center"} color="#A0AEC0" fontSize={"sm"}>
         Copyright @ Peddle Technologies. All Rights Reserved.
       </Text>
     </VStack>
