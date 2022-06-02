@@ -11,7 +11,7 @@ const ComingSoon: React.FC = () => {
       bgPosition={"center"}
       bgSize="cover"
       p={3}
-      height={"142vh"}
+      height={{ base: "142vh", md: "140vh" }}
     >
       <Navbar />
       <Container maxWidth={"container.lg"}>
