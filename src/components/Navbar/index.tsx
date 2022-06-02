@@ -8,6 +8,7 @@ import {
   useBreakpointValue,
   VStack,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 import Logo from "../../images/logo.svg";
 
@@ -43,6 +44,8 @@ const Navbar: React.FC = () => {
             fontWeight="medium"
             textTransform="uppercase"
             fontSize={"xs"}
+            as={Link}
+            to="/about"
           >
             About
           </Button>
@@ -60,6 +63,8 @@ const Navbar: React.FC = () => {
             fontWeight="medium"
             color="white"
             fontSize={"xs"}
+            as={Link}
+            to="/blog"
           >
             Blog
           </Button>
