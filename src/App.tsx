@@ -1,4 +1,3 @@
-import axios from "axios";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
