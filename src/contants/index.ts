@@ -1,12 +1,10 @@
-import axios from "axios";
-
 export const GITHUB_API_URL = import.meta.env.VITE_GITHUB_API_URL;
 
-export const fetchRepoData = async () => {
-  const res = await axios.get(
-    `${GITHUB_API_URL}q=created:%3E2022-05-02&sort=stars&order=desc`
+export const fetchRepoData = async (page: number = 1) => {
+  const res = await fetch(
+    `${GITHUB_API_URL}q=created:%3E2022-05-02&sort=stars&order=desc&per_page=30&page=${page}`
   );
-  return res.data;
+  return res.json();
 };
 
 export const kFormatter = (num: number) => {
