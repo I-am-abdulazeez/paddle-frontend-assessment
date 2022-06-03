@@ -17,8 +17,8 @@ const Github: React.FC = () => {
   const { data, isLoading } = useQuery("repoData", fetchRepoData);
   console.log(data?.items);
   return (
-    <Container mt={3} maxW="container.lg">
-      <Heading mb={6} size={"lg"} textAlign={"center"}>
+    <Container maxW="container.lg">
+      <Heading my={10} size={"lg"} textAlign={"center"}>
         Trending Github Repos
       </Heading>
       <Center mt={4}>
@@ -26,10 +26,9 @@ const Github: React.FC = () => {
           <Spinner thickness="3px" emptyColor="gray.200" color="pink.500" />
         )}
       </Center>
-      {data?.items?.map((item: any) => {
-        console.log(item?.avatar_url);
-        return <GithubRepoCard item={item} />;
-      })}
+      {data?.items?.map((item: any) => (
+        <GithubRepoCard item={item} key={item.id} />
+      ))}
     </Container>
   );
 };
