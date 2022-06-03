@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-import Logo from "../../images/logo.svg";
+import Logo from "../../images/logo.png";
 
 const Navbar: React.FC = () => {
   const buttonSize = useBreakpointValue({ base: "xs", md: "sm" });
@@ -18,8 +18,13 @@ const Navbar: React.FC = () => {
   return (
     <Container maxW={["", "container.lg"]}>
       <Flex justify={"space-between"}>
-        <VStack spacing={-2}>
-          <Image boxSize={["8", "10"]} src={Logo} alt="Dan Abramov" />
+        <VStack spacing={1}>
+          <Image
+            width={{ base: 6, md: 10 }}
+            height={{ base: 4, md: 6 }}
+            src={Logo}
+            alt="Logo"
+          />
           <Text
             fontWeight={"semibold"}
             color={"#fff"}
