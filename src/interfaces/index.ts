@@ -13,6 +13,5 @@ export interface ClockCardProps {
 }
 
 export interface GithubRepoCardProps {
-  children?: React.ReactNode;
   item: any;
 }
