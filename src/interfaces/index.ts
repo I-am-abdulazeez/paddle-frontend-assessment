@@ -13,5 +13,5 @@ export interface ClockCardProps {
 }
 
 export interface GithubRepoCardProps {
-  item: any;
+  repo: any;
 }
