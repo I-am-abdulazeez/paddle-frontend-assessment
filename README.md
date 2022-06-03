@@ -26,6 +26,8 @@ This app is a frontend coding assessment based on vite-react app. Added chakra-u
 - chakra-ui/react
   - framer-motion
   - @emotion/react | emotion/styled
+- react-query
+- react-icons
 
 ## Get started
 
