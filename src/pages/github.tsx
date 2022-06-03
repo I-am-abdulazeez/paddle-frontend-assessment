@@ -19,15 +19,15 @@ const Github: React.FC = () => {
   return (
     <Container maxW="container.lg">
       <Heading my={10} size={"lg"} textAlign={"center"}>
-        Trending Github Repos
+        Trending Github Repos 💪💪
       </Heading>
       <Center mt={4}>
         {isLoading && (
           <Spinner thickness="3px" emptyColor="gray.200" color="pink.500" />
         )}
       </Center>
-      {data?.items?.map((item: any) => (
-        <GithubRepoCard item={item} key={item.id} />
+      {data?.items?.map((repo: any) => (
+        <GithubRepoCard repo={repo} key={repo.id} />
       ))}
     </Container>
   );
