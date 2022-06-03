@@ -13,6 +13,12 @@ import { GithubRepoCardProps } from "../../interfaces";
 
 const GithubRepoCard: React.FC<GithubRepoCardProps> = ({ repo }) => {
   const headingSize = useBreakpointValue({ base: "sm", sm: "md" });
+  // How to get Day interval
+  const createdAt = new Date(repo?.created_at);
+  const today = new Date();
+  const diff = Math.abs(createdAt.getTime() - today.getTime());
+  const daysInterval = Math.ceil(diff / (1000 * 3600 * 24));
+
   return (
     <HStack
       p={4}
@@ -44,7 +50,7 @@ const GithubRepoCard: React.FC<GithubRepoCardProps> = ({ repo }) => {
           </Badge>
         </HStack>
         <Text fontSize={{ base: "xs", md: "sm" }} fontStyle={"italic"}>
-          Submitted 30days ago by{" "}
+          Submitted {daysInterval} ago by{" "}
           <chakra.span fontWeight={"medium"}>{repo?.name}</chakra.span>
         </Text>
       </Stack>
