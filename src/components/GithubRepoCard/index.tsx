@@ -50,7 +50,7 @@ const GithubRepoCard: React.FC<GithubRepoCardProps> = ({ repo }) => {
           </Badge>
         </HStack>
         <Text fontSize={{ base: "xs", md: "sm" }} fontStyle={"italic"}>
-          Submitted {daysInterval} ago by{" "}
+          Submitted {daysInterval} days ago by{" "}
           <chakra.span fontWeight={"medium"}>{repo?.name}</chakra.span>
         </Text>
       </Stack>
