@@ -27,6 +27,7 @@ const Github: React.FC = () => {
           // get the max page first
           const maxPages = lastPage?.total_count / 30;
           const nextPage = allPages?.length + 1;
+          // if nextPage is less than maxPages, return nextPage, else return Nothing
           return nextPage <= maxPages ? nextPage : undefined;
         },
       }
@@ -53,12 +54,13 @@ const Github: React.FC = () => {
           )}
         </Center>
 
-        <Center mt={4}>{isError && <Text>Error loading data</Text>}</Center>
-        {data?.pages?.map((group: any) => {
-          return group?.items?.map((repo: any) => {
-            return <GithubRepoCard repo={repo} key={repo.id} />;
-          });
-        })}
+        <Center mt={4}>{isError && <Text>Error loading data...</Text>}</Center>
+        {data?.pages &&
+          data?.pages?.map((group: any) => {
+            return group?.items?.map((repo: any) => {
+              return <GithubRepoCard repo={repo} key={repo.id} />;
+            });
+          })}
         <Center mt={4}>
           {!isLoading && (
             <Button
