@@ -6,6 +6,7 @@ import {
   Heading,
   Spinner,
   Text,
+  useToast,
 } from "@chakra-ui/react";
 import { MouseEventHandler } from "react";
 
@@ -14,6 +15,7 @@ import GithubRepoCard from "../components/GithubRepoCard";
 import { fetchRepoData } from "../contants";
 
 const Github: React.FC = () => {
+  const toast = useToast();
   const { data, isError, isLoading, isFetching, fetchNextPage, hasNextPage } =
     useInfiniteQuery(
       ["repoData"],
@@ -21,8 +23,16 @@ const Github: React.FC = () => {
       {
         // for infinite Query
         keepPreviousData: true,
-        onSuccess: () => console.log("data fetch with no problemo!"),
-        onError: () => console.log("data fetch error!"),
+        onError: (error) => {
+          const err = error as Error;
+          toast({
+            containerStyle: {
+              fontSize: "12.5px",
+            },
+            isClosable: true,
+            title: `${err.message}`,
+          });
+        },
         getNextPageParam: (lastPage, allPages) => {
           // get the max page first
           const maxPages = lastPage?.total_count / 30;
