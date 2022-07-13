@@ -27,6 +27,7 @@ const GithubRepoCard: React.FC<GithubRepoCardProps> = ({ repo }) => {
       shadow="sm"
       my={7}
       spacing={8}
+      borderRight="2px solid #7928CA"
     >
       <Image
         boxSize="70px"
@@ -51,7 +52,7 @@ const GithubRepoCard: React.FC<GithubRepoCardProps> = ({ repo }) => {
         </HStack>
         <Text fontSize={{ base: "xs", md: "sm" }} fontStyle={"italic"}>
           Submitted {daysInterval} days ago by{" "}
-          <chakra.span fontWeight={"medium"}>{repo?.name}</chakra.span>
+          <chakra.span fontWeight={"semibold"}>{repo?.name}</chakra.span>
         </Text>
       </Stack>
     </HStack>
