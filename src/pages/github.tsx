@@ -43,7 +43,7 @@ const Github: React.FC = () => {
       }
     );
 
-  const handleLoadMore:
+  const handleFetchMore:
     | MouseEventHandler<HTMLButtonElement>
     | undefined = () => {
     if (hasNextPage) {
@@ -86,9 +86,9 @@ const Github: React.FC = () => {
               colorScheme={"purple"}
               isLoading={isFetching || !hasNextPage}
               size={"sm"}
-              onClick={handleLoadMore}
+              onClick={handleFetchMore}
             >
-              Load More
+              Fetch More Repos
             </Button>
           )}
         </Center>
