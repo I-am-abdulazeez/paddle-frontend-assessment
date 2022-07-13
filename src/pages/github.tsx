@@ -54,7 +54,7 @@ const Github: React.FC = () => {
   return (
     <Box py={6}>
       <Container maxW="container.lg">
-        <Box textAlign={"center"} my={10}>
+        <Box textAlign={"center"} my={5}>
           <Heading
             bgClip="text"
             bgGradient="linear(to-l, #7928CA, #FF0080)"
