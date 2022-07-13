@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({
       shadow={"md"}
       spacing={5}
     >
-      <Text fontSize={"xl"} fontWeight="medium">
+      <Text fontSize={"xl"} fontWeight="semibold">
         {cardText}
       </Text>
       <Text>{cardTopic}</Text>
