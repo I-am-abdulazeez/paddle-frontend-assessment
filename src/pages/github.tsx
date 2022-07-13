@@ -54,13 +54,22 @@ const Github: React.FC = () => {
   return (
     <Box py={6}>
       <Container maxW="container.lg">
-        <Heading my={10} size={"lg"} textAlign={"center"}>
-          Trending Github Repos in the last 30 Days 💪💪💪
-        </Heading>
+        <Box textAlign={"center"} my={10}>
+          <Heading
+            bgClip="text"
+            bgGradient="linear(to-l, #7928CA, #FF0080)"
+            size={"lg"}
+          >
+            Trending Github Repos
+          </Heading>
+          <Text mt={3} fontWeight={"bold"} fontSize={"xl"}>
+            in the last 30 Days Days 🙂 🙂 🙂
+          </Text>
+        </Box>
 
         <Center mt={4}>
           {isFetching && (
-            <Spinner thickness="3px" emptyColor="gray.200" color="pink.500" />
+            <Spinner thickness="2px" emptyColor="gray.200" color="pink.500" />
           )}
         </Center>
 
