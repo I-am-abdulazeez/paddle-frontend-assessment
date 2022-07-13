@@ -2,7 +2,7 @@ export const GITHUB_API_URL = import.meta.env.VITE_GITHUB_API_URL;
 
 export const fetchRepoData = async (page: number = 1) => {
   const res = await fetch(
-    `${GITHUB_API_URL}q=created:%3E2022-05-02&sort=stars&order=desc&per_page=30&page=${page}`
+    `${GITHUB_API_URL}q=created:%3E2022-06-13&sort=stars&order=desc&per_page=20&page=${page}`
   );
   return res.json();
 };
