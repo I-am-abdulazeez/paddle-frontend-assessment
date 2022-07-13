@@ -7,22 +7,22 @@ const Home: React.FC = () => {
     <Center height={"100vh"} p={{ base: 5, md: 0 }}>
       <VStack spacing={10} textAlign="center">
         <Heading
-          size={"2xl"}
+          size={"xl"}
           bgClip="text"
           bgGradient="linear(to-l, #7928CA, #FF0080)"
         >
-          Welcome to <Text mt={3}>Peddle-Frontend-Assessment</Text>
+          Welcome to <Text mt={2}>Peddle-Frontend-Assessment</Text>
         </Heading>
         <Stack direction={{ base: "column", md: "row" }} spacing={5}>
           <Card
-            cardTopic="Design a  Comming soon page / Conatct Us page"
-            cardButton="Go to coming soon page"
+            cardTopic="Design a  Comming soon page / Conatct us page."
+            cardButton="Coming soon page"
             cardText="Peddle Assessment Task 1"
             cardLinkTo="/comingsoon"
           />
           <Card
-            cardTopic="Use Github API to display latest repo from the last 30days"
-            cardButton="Go to github data page"
+            cardTopic="Using Github API to display latest repo from the last 30days."
+            cardButton="Github data page"
             cardText="Peddle Assessment Task 2"
             cardButtonColorScheme="pink"
             cardLinkTo="/github"
