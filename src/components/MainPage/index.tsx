@@ -59,7 +59,7 @@ const MainPage: React.FC = () => {
           />
         </HStack>
       </Center>
-      <Center mt={"3rem"}>
+      <Center mt={"3rem"} mb={"8em"}>
         <HStack
           borderRadius="full"
           width={{ base: "100%", md: "50%" }}
