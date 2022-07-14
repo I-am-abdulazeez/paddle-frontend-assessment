@@ -11,14 +11,8 @@ import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
-    <VStack
-      spacing={5}
-      mt={{ base: "48", sm: "32", md: "56" }}
-      justifyContent={"center"}
-      color={"white"}
-      as="footer"
-    >
-      <HStack spacing={7} mb={3}>
+    <VStack spacing={5} justifyContent={"center"} color={"white"} as="footer">
+      <HStack spacing={7}>
         <RiYoutubeFill size={"25px"} />
         <RiFacebookBoxFill size={"25px"} color="#A0AEC0" />
         <RiLinkedinBoxFill size={"25px"} color="#A0AEC0" />
